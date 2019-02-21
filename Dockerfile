@@ -1,4 +1,5 @@
-FROM registry.access.redhat.com/rhscl/php-72-rhel7
+# FROM registry.access.redhat.com/rhscl/php-72-rhel7
+FROM centos/php-72-centos7
 
 USER root
 
