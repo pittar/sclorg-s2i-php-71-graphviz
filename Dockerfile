@@ -15,6 +15,6 @@ ENV POSTGRESQL_VERSION=9.6
 RUN yum update -y; yum clean all
 
 # Install Apache Web Server
-RUN yum install -y rh-postgresql96 graphviz; yum clean all
+RUN yum install -y rh-postgresql96-postgresql-contrib rh-postgresql95-postgresql-server graphviz; yum clean all
 
 USER 1001
