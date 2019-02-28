@@ -12,9 +12,13 @@ ENV POSTGRESQL_VERSION=9.6
 #    yum clean all
 
 # Update the image with the latest packages (recommended)
-RUN yum update -y; yum clean all
+# RUN yum update -y; yum clean all
 
 # Install Apache Web Server
-RUN yum install -y rh-postgresql96-postgresql-contrib rh-postgresql95-postgresql-server graphviz; yum clean all
+RUN yum update -y && \
+    yum install -y rh-postgresql96 graphviz && \
+    yum clean all
+
+RUN scl enable rh-postgresql96 bash;
 
 USER 1001
